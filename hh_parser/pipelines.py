@@ -6,12 +6,13 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from .settings import BOT_NAME
+from settings import BOT_NAME
 from pymongo import MongoClient
 
 
 class GbParsePipeline:
-    def process_item(self, item, spider):
+
+     def process_item (self, item, spider):
         return item
 
 

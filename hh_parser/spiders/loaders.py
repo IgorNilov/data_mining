@@ -1,6 +1,6 @@
 from scrapy.loader import ItemLoader
 from itemloaders.processors import TakeFirst, MapCompose
-from .processors import flat_text, hh_user_url, hh_sphere_activities_clean, concatenate_items
+from processors import flat_text, hh_user_url, hh_sphere_activities_clean, concatenate_items
 
 
 class HHVacancyLoader(ItemLoader):

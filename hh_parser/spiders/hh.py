@@ -3,8 +3,8 @@ from urllib.parse import urlencode
 import pymongo
 import scrapy
 
-from .loaders import HHVacancyLoader, HHCompanyLoader
-from .xpath_selectors import PAGINATION, VACANCY, VACANCY_DATA, COMPANY_DATA
+from loaders import HHVacancyLoader, HHCompanyLoader
+from xpath_selectors import PAGINATION, VACANCY, VACANCY_DATA, COMPANY_DATA
 
 
 class HhSpider(scrapy.Spider):
@@ -20,13 +20,14 @@ class HhSpider(scrapy.Spider):
         "disableBrowserCache": True,
     }
 
+
     def _get_follow(self, response, xpath, callback):
         for url in response.xpath(xpath):
             yield response.follow(url, callback=callback)
 
     def parse(self, response):
         for item in (PAGINATION, VACANCY):
-            yield from self._get_follow(response, item["selector"], getattr(self, item["callback"]))
+            yield from self. _get_follow(response, item["selector"], getattr(self, item["callback"]))
 
     def vacancy_parse(self, response):
         loader = HHVacancyLoader(response=response)

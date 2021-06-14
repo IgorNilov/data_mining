@@ -5,7 +5,7 @@
 
 import scrapy
 
-class GbParseItem(scrapy.Item):
+class HhSpider(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
