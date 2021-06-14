@@ -5,7 +5,7 @@ PAGINATION = {
 
 VACANCY = {
     "selector": '//div[contains(@data-qa, "vacancy-serp__vacancy")]//'
-    'a[@data-qa="vacancy-serp__vacancy-title"]/@href',
+                'a[@data-qa="vacancy-serp__vacancy-title"]/@href',
     "callback": "vacancy_parse",
 }
 
@@ -15,15 +15,15 @@ VACANCY_DATA = {
     "description": {"xpath": '//div[@data-qa="vacancy-description"]//text()'},
     "skills": {
         "xpath": '//div[@class="bloko-tag-list"]//'
-        'div[contains(@data-qa, "skills-element")]/'
-        'span[@data-qa="bloko-tag__text"]/text()'
+                 'div[contains(@data-qa, "skills-element")]/'
+                 'span[@data-qa="bloko-tag__text"]/text()'
     },
     "author": {"xpath": '//a[@data-qa="vacancy-company-name"]/@href'},
 }
 
 COMPANY_VACANCYES = {
     "selector": '//div[contains(@data-qa, "vacancy-serp__vacancy")]//'
-    'a[@data-qa="vacancy-serp__vacancy-title"]/@href',
+                'a[@data-qa="vacancy-serp__vacancy-title"]/@href',
     "callback": "vacancy_parse",
 }
 
